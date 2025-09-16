@@ -1,0 +1,35 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: inference-server-api
+  title: Inference Server API
+  description: A sample inference server API
+  tags:
+    - http
+    - inference
+    - api
+    - server
+spec:
+  type: service
+  lifecycle: experimental
+  owner: user1
+  providesApis:
+    - inference-server-api
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: inference-server-api
+  title: Inference Server API
+  description:  A sample inference server API
+  tags:
+    - inference
+    - server
+    - openapi
+spec:
+  type: openapi
+  lifecycle: experimental
+  owner: user1
+  definition:
+    $text: ./openapi.json
